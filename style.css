@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,500;1,600;1,700&display=swap');
+header{
+    background-color: rgb(238, 238, 238);
+
+}
+body{
+    font-family: "IBM Plex Sans", sans-serif;
+}
+.titlebar{
+height: 3rem;
+display: flex;
+align-items: center;
+gap: 0.25rem;
+}
+
+.title-img{
+    height: 50%;
+    margin-left: 9px;
+}
+
+.title{
+  font-size: 1.1rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+.menu{
+    position: relative;
+}
+
+.menu-bar{
+    display: flex;
+gap: 1rem;
+margin-left: 0.8rem;
+align-items: center;
+height: 1.5em;
+}
+
+
+.menu-items{
+    position: absolute;
+    background-color: rgb(238, 238, 238);
+    padding: 0px;
+    width: 120px;
+top: 9px;
+display: none;
+text-align: center;
+font-size: 15px;
+}
+
+.menu-items li{
+    padding: 6px;
+}
+.menu-items li:hover{
+    background-color: lightgray;
+    cursor: pointer;
+
+}
+.menu-btn{
+    padding: 3px;
+}
+
+.videoInput{
+    display: none;
+}
+
+
+.menu-btn:hover{
+    background-color: lightblue;
+    cursor: default;
+}
+
+
+.menu:hover .menu-items{
+    display: block;
+}
+
+
+
+
+
+main{
+    height: calc(100vh - 8rem);
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.video{
+    height: 100%;
+
+}
+
+footer{
+    height: 3rem;
+}
+
+.previousvideo{
+    display: none;
+}
+
+.toast{
+color: white;
+font-size: 30px;
+position: fixed;
+top: 90px;
+right: 90px;
+display: none;
+opacity: 0.72;
+}
+
+.firstPart{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 5px 17px 0px 12px;
+
+}
+
+.range{
+    width: 100%;
+            background-color: gray;
+            border-radius: 5px; /* Optional: rounded corners */
+            overflow: hidden;
+            height: 0.3rem;
+        }
+
+        .progressBar{
+            width: 0%; /* Set the width of the progress bar; adjust as needed */
+            background-color: blue; /* Color of the progress bar */
+            height: 100%; /* Fill the container’s height */
+            transition: width 0.5s;
+            position: relative;
+}
+
+.progressBar::before{
+    right: 0;
+    content: "";
+    top: -8px;
+    height: 20px;
+    bottom: 56px;
+    width: 7px;
+    background-color: black;
+    position: absolute;
+    border-radius: 127%;
+    display: none;
+}
+
+.range:hover .progressBar::before{
+    display: block;
+}
+.secondPart{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+i#icon-pp , .fa-expand{
+    border: 2px bold black;
+    margin: 1px 2px  0px 12px;
+    padding: 4px;
+    background-color: lightgray;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+i#backward ,i#pause ,i#forward{
+    margin: 0px 5px 0px 0px;
+    border: 2px bold black;
+    background-color: lightgray;
+    padding: 4px;
+    width: auto;
+
+
+}
+
+.fa-expand{
+    margin: 0px 1px 0px 0px;
+
+}
+
+
+
+i#icon-pp:active , .fa-expand:active{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.totalDuration{
+
+}
